@@ -2,6 +2,8 @@
 
 You have to implement a Todo app which has a command-line interface(CLI). The tests are failing right now. Write code to pass all automated tests.
 
+[![asciicast](https://asciinema.org/a/4uiyEA4DHBy1YQcJj4ctY2HWM.svg)](https://asciinema.org/a/4uiyEA4DHBy1YQcJj4ctY2HWM)
+
 ### Setup command
 
 `npm install`
@@ -34,8 +36,6 @@ x dd/mm/yyyy the text contents of the todo item
 The date when the todo is marked as completed is recorded in the `dd/mm/yyyy` format. For example, a date like `15th August, 2020` becomes `15/08/2020`.
 
 _Lookup the text files `todo.txt` and `done.txt` from where the command-line is run_.
-
-[![Watch the video](https://asciinema.org/a/4uiyEA4DHBy1YQcJj4ctY2HWM.png)](https://asciinema.org/a/4uiyEA4DHBy1YQcJj4ctY2HWM)
 
 ### Usage
 
