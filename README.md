@@ -35,6 +35,8 @@ The date when the todo is marked as completed is recorded in the `dd/mm/yyyy` fo
 
 _Lookup the text files `todo.txt` and `done.txt` from where the command-line is run_.
 
+[![Watch the video](https://asciinema.org/a/4uiyEA4DHBy1YQcJj4ctY2HWM.png)](https://asciinema.org/a/4uiyEA4DHBy1YQcJj4ctY2HWM)
+
 ### Usage
 
 Executing the command without any arguments, or with a single argument `help` prints the CLI usage.
