@@ -1,43 +1,56 @@
-# Test Problem: Todo App (CLI)
+# CoronaSafe Engineering Fellowship Test Problem
 
-You have to implement a Todo app which has a command-line interface(CLI). The tests are failing right now. Write code to pass all automated tests.
+Thanks for applying to the CoronaSafe Engineering fellowship!
+
+In this step we want to see how you implement a command-line (CLI) program that lets you manage your todos.
+
+The specification for this problem is written down as tests. Since we haven’t actually implemented anything, the tests are currently failing. You have to solve the problem by implementing the application and getting all the tests to pass.
+
+Here's how it should work when you're done:
 
 [![asciicast](https://asciinema.org/a/4uiyEA4DHBy1YQcJj4ctY2HWM.svg)](https://asciinema.org/a/4uiyEA4DHBy1YQcJj4ctY2HWM)
 
-### Setup command
+## Getting started
 
-`npm install`
+1. Install Node.js: You need to have npm installed in your computer for this problem. It comes with Node.js and you can get it by installing Node from https://nodejs.org/en/
 
-### Run automated tests
+2. Run `npm install` to install all dependencies
 
-`npm test`
+3. Now run `npm test` and you will see all the tests failing. As you fill in each functionality, you can re-run the tests to see them passing one by one.
 
 ## Specification
 
-The todo app has a command-line interface. For a Node.js implementation the command for running the app is `node todo.js`.
+1. The app can be run in the console with `node todo.js`.
 
-The todo app reads from and writes to a `todo.txt` text file. Each todo item occupies a single line in `todo.txt`. Here is an example `todo.txt` with 2 todo items.
+2. The app should read from and write to a `todo.txt` text file. Each todo item occupies a single line in this file. Here is an example file that has 2 todo items.
 
 ```txt
 water the plants
 change light bulb
 ```
 
-When a todo item is marked as completed it is removed from `todo.txt` and added to the `done.txt` text file. The line format has additional metadata separated by a single space:
+3. When a todo item is completed, it should be removed from `todo.txt` and instead added to the `done.txt` text file. This file has a different format:
 
 ```txt
-x dd/mm/yyyy the text contents of the todo item
+x 2020-06-12 the text contents of the todo item
 ```
 
-1. the x character marker
-2. the current date in `dd/mm/yyyy` format
+1. the letter x
+2. the current date in `yyyy-mm-dd` format
 3. the original text
 
-The date when the todo is marked as completed is recorded in the `dd/mm/yyyy` format. For example, a date like `15th August, 2020` becomes `15/08/2020`.
+The date when the todo is marked as completed is recorded in the `yyyy-mm-dd` format (ISO 8601). For example, a date like `15th August, 2020` is represented as `2020-08-15`.
 
-_Lookup the text files `todo.txt` and `done.txt` from where the command-line is run_.
+4. The application must open the files `todo.txt` and `done.txt` from where the app is run, and not where the app is located. For example, if we invoke the app like this:
 
-### Usage
+		$ cd ~/plans
+		$ node ~/apps/todo.js ls
+
+The application should look for the text files in ~/plans, since that is the user’s current directory.
+
+## Usage
+
+### 1. Help
 
 Executing the command without any arguments, or with a single argument `help` prints the CLI usage.
 
@@ -52,9 +65,9 @@ $ node todo.js help             # Show usage
 $ node todo.js report           # Statistics
 ```
 
-### Show pending todos
+### 2. List all pending todos
 
-Use the `ls` command. The most recently added todo is displayed first.
+Use the `ls` command to see all the todos that are not yet complete. The most recently added todo should be displayed first.
 
 ```
 $ node todo.js ls
@@ -62,16 +75,16 @@ $ node todo.js ls
 [1] water the plants
 ```
 
-### Add a todo item
+### 3. Add a new todo
 
-Use the `add` command. The text of the todo item is enclosed within double quotes.
+Use the `add` command. The text of the todo item should be enclosed within double quotes (otherwise only the first word is considered as the todo text, and the remaining words are treated as different arguments).
 
 ```
 $ node todo.js add "the thing i need to do"
 Added todo: "the thing i need to do"
 ```
 
-### Delete a todo item
+### 4. Delete a todo item
 
 Use the `del` command to remove a todo item by its number.
 
@@ -80,14 +93,14 @@ $ node todo.js del 3
 Deleted todo #3
 ```
 
-Attempting to delete a non-existent todo item will display an error message.
+Attempting to delete a non-existent todo item should display an error message.
 
 ```
 $ node todo.js del 5
 Error: todo #5 does not exist. Nothing deleted.
 ```
 
-### Mark todo item as completed
+### 5. Mark a todo item as completed
 
 Use the `done` command to mark a todo item as completed by its number.
 
