@@ -2,14 +2,6 @@ const { EOL } = require("os");
 const fs = require("fs");
 const { execSync, exec } = require("child_process");
 
-let ddMmYyyy = () => {
-  const o_date = new Intl.DateTimeFormat();
-  const f_date = (m_ca, m_it) => Object({ ...m_ca, [m_it.type]: m_it.value });
-  const { day, month, year } = o_date.formatToParts().reduce(f_date, {});
-
-  return `${day}/${month}/${year}`;
-};
-
 let deleteFile = (path) => {
   try {
     fs.unlinkSync(path);
@@ -179,8 +171,8 @@ test("report pending & completed todos", () => {
   execSync(todoTxtCli("done", "1"));
   execSync(todoTxtCli("done", "2"));
 
-  let date = ddMmYyyy();
-  let expected = `${date} Pending : 1 Completed : 2${EOL}`;
+  let date = new Date();
+  let expected = `${date.toISOString().slice(0, 10)} Pending : 1 Completed : 2${EOL}`;
   let received = execSync(todoTxtCli("report")).toString("utf8");
 
   expect(received).toBe(expected);
