@@ -24,9 +24,9 @@ cpp: _build
 	# Append C++ compiled binary to `todo.sh`
 	# The $@ will pass through CLI args to the binary
 	echo \\n./todo \"$$\@\" >> _build/cpp/todo.sh
-	cd _build && zip -jr --quiet todo-txt-cpp.zip cpp -x "node_modules" -x "package-lock.json"
+	cd _build && zip -jr --quiet fellowship-cpp.zip cpp -x "node_modules" -x "package-lock.json"
 	rm -rf _build/cpp
-	echo "Created C++ package: todo-txt-cpp.zip"
+	echo "Created C++ package: fellowship-cpp.zip"
 
 javascript: _build
 	cp -rf javascript _build
@@ -34,9 +34,9 @@ javascript: _build
 	# Append node command to `todo.sh`
 	# The $@ will pass through CLI args to the node executable
 	echo \\nnode todo.js \"$$\@\" >> _build/javascript/todo.sh
-	cd _build && zip -jr --quiet todo-txt-javascript.zip javascript -x "node_modules" -x "package-lock.json"
+	cd _build && zip -jr --quiet fellowship-javascript.zip javascript -x "node_modules" -x "package-lock.json"
 	rm -rf _build/javascript
-	echo "Created JavaScript package: todo-txt-javascript.zip"
+	echo "Created JavaScript package: fellowship-javascript.zip"
 
 _build:
 	mkdir -p _build
