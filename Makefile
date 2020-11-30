@@ -1,11 +1,13 @@
-todo: todo.o
-	g++ todo.o -o todo
+cpp: _build
+	cp -rf cpp _build
+	cp -rf shared/ _build/cpp
+	echo ./todo \"$$\@\" >> _build/cpp/todo.sh
+	cd _build && zip -jvr todo-txt-cpp.zip cpp -x "node_modules" -x "package-lock.json"
+	rm -rf _build/cpp
+	open _build/
 
-todo.o:
-	g++ -c -std=c++11 -Wall todo.cpp -o todo.o
-
-test: todo
-	npm run test
+_build:
+	mkdir -p _build
 
 clean:
-	rm -f todo.o todo
+	rm -rf _build
