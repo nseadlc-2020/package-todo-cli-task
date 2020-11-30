@@ -4,7 +4,6 @@
 # Checklist:
 # - [ ] Add a todo.[java|rb|py] file depending on the language
 # - [ ] Copy shared files
-#   The include:
 # 	1. `README.md`: for the todo-txt-cli problem
 # 	2. `todo.test.js`: end-to-end testing using Jest JavaScript framework
 # 	3. `package.json`: for installing jest
