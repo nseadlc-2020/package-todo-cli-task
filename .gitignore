@@ -1,4 +1,5 @@
 node_modules/
 todo.txt
 done.txt
-a.out
+todo.o
+todo

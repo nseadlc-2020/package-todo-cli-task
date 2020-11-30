@@ -1,10 +1,11 @@
-all: a.out
+todo: todo.o
+	g++ todo.o -o todo
 
-a.out:
-	g++ -std=c++11 -Wall todo.cpp
+todo.o:
+	g++ -c -std=c++11 -Wall todo.cpp -o todo.o
 
-test: a.out
+test: todo
 	npm run test
 
 clean:
-	rm a.out
+	rm -f todo.o todo
