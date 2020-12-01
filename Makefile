@@ -1,6 +1,6 @@
 #
 # Add a new langauge by creating a build rule like either cpp or javascript
-# 
+#
 # Checklist:
 # - [ ] Add a todo.[java|rb|py] file depending on the language
 # - [ ] Copy shared files
@@ -20,7 +20,7 @@ all: clean $(TARGETS)
 
 cpp: _build
 	cp -rf cpp _build
-	cp -rf shared/ _build/cpp
+	cp -arf shared/. _build/cpp
 	# Append C++ compiled binary to `todo.sh`
 	# The $@ will pass through CLI args to the binary
 	echo \\n./todo \"$$\@\" >> _build/cpp/todo.sh
@@ -30,7 +30,7 @@ cpp: _build
 
 javascript: _build
 	cp -rf javascript _build
-	cp -rf shared/ _build/javascript
+	cp -arf shared/. _build/javascript
 	# Append node command to `todo.sh`
 	# The $@ will pass through CLI args to the node executable
 	echo \\nnode todo.js \"$$\@\" >> _build/javascript/todo.sh
