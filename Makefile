@@ -11,7 +11,7 @@
 # - [ ] Append language specific executable command to `todo.sh`
 #
 
-TARGETS = cpp javascript ruby java
+TARGETS = cpp javascript ruby java python
 
 
 all: clean $(TARGETS)
@@ -47,6 +47,16 @@ ruby: _build
 	cd _build && zip -r --quiet fellowship-ruby.zip ruby -x "node_modules" -x "package-lock.json"
 	rm -rf _build/ruby
 	echo "Created ruby package: fellowship-ruby.zip"
+
+python: _build
+	cp -rf python _build
+	cp -arf shared/. _build/python
+	# Append python command to `todo.sh`
+	# The $@ will pass through CLI args to the node executable
+	echo \\npython3 todo.py \"$$\@\" >> _build/python/todo.sh
+	cd _build && zip -r --quiet fellowship-python.zip python -x "node_modules" -x "package-lock.json"
+	rm -rf _build/python
+	echo "Created python package: fellowship-python.zip"
 
 java: _build
 	cp -rf java _build
