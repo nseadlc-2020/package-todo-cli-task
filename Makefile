@@ -24,6 +24,7 @@ cpp: _build
 	# Append C++ compiled binary to `todo.sh`
 	# The $@ will pass through CLI args to the binary
 	echo \\n./todo \"$$\@\" >> _build/cpp/todo.sh
+	echo \\n./todo %1 %2 >> _build/cpp/todo.bat
 	cd _build && zip -r --quiet fellowship-cpp.zip cpp -x "node_modules" -x "package-lock.json"
 	rm -rf _build/cpp
 	echo "Created C++ package: fellowship-cpp.zip"
@@ -34,6 +35,7 @@ javascript: _build
 	# Append node command to `todo.sh`
 	# The $@ will pass through CLI args to the node executable
 	echo \\nnode todo.js \"$$\@\" >> _build/javascript/todo.sh
+	echo \\nnode todo.js %1 %2 >> _build/javascript/todo.bat
 	cd _build && zip -r --quiet fellowship-javascript.zip javascript -x "node_modules" -x "package-lock.json"
 	rm -rf _build/javascript
 	echo "Created JavaScript package: fellowship-javascript.zip"
@@ -44,6 +46,7 @@ ruby: _build
 	# Append ruby command to `todo.sh`
 	# The $@ will pass through CLI args to the node executable
 	echo \\nruby todo.rb \"$$\@\" >> _build/ruby/todo.sh
+	echo \\nruby todo.rb %1 %2 >> _build/ruby/todo.bat
 	cd _build && zip -r --quiet fellowship-ruby.zip ruby -x "node_modules" -x "package-lock.json"
 	rm -rf _build/ruby
 	echo "Created ruby package: fellowship-ruby.zip"
@@ -54,6 +57,7 @@ python: _build
 	# Append python command to `todo.sh`
 	# The $@ will pass through CLI args to the node executable
 	echo \\npython3 todo.py \"$$\@\" >> _build/python/todo.sh
+	echo \\npython3 todo.py %1 %2 >> _build/python/todo.bat
 	cd _build && zip -r --quiet fellowship-python.zip python -x "node_modules" -x "package-lock.json"
 	rm -rf _build/python
 	echo "Created python package: fellowship-python.zip"
@@ -64,6 +68,7 @@ java: _build
 	# Append C++ compiled binary to `todo.sh`
 	# The $@ will pass through CLI args to the binary
 	echo \\njava Todo \"$$\@\" >> _build/java/todo.sh
+	echo \\njava Todo %1 %2 >> _build/java/todo.bat
 	cd _build && zip -r --quiet fellowship-java.zip java -x "node_modules" -x "package-lock.json"
 	rm -rf _build/java
 	echo "Created Java package: fellowship-java.zip"
