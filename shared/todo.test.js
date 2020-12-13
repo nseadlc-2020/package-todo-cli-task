@@ -12,17 +12,15 @@ beforeEach(() => {
   deleteFile(`${__dirname}/done.txt`);
 });
 
-let executable = process.platform === "win32" ? "todo.bat" : "todo.sh";
-
-let todoTxtCli = (...args) => [`${__dirname}/${executable}`, ...args].join(" ");
+let todoTxtCli = (...args) => [`${__dirname}/todo`, ...args].join(" ");
 
 let usage = `Usage :-
-$ ./todo.exe add "todo item"  # Add a new todo
-$ ./todo.exe ls               # Show remaining todos
-$ ./todo.exe del NUMBER       # Delete a todo
-$ ./todo.exe done NUMBER      # Complete a todo
-$ ./todo.exe help             # Show usage
-$ ./todo.exe report           # Statistics`;
+$ ./todo add "todo item"  # Add a new todo
+$ ./todo ls               # Show remaining todos
+$ ./todo del NUMBER       # Delete a todo
+$ ./todo done NUMBER      # Complete a todo
+$ ./todo help             # Show usage
+$ ./todo report           # Statistics`;
 
 test("prints help when no additional args are provided", () => {
   let received = execSync(todoTxtCli()).toString("utf8");

@@ -16,7 +16,21 @@ Here's how it should work when you're done:
 
 2. Run `npm install` to install all dependencies
 
-3. Now run `npm test` and you will see all the tests failing. As you fill in each functionality, you can re-run the tests to see them passing one by one.
+3. Create symbolic link to the executable file
+
+   **On Windows:**
+
+   ```
+   > mklink todo todo.bat
+   ```
+
+   **On \*nix:**
+
+   ```
+   $ ln -s todo.sh todo
+   ```
+
+4. Now run `npm test` and you will see all the tests failing. As you fill in each functionality, you can re-run the tests to see them passing one by one.
 
 ## Specification
 
@@ -29,22 +43,24 @@ water the plants
 change light bulb
 ```
 
-3. When a todo item is completed, it should be removed from `todo.txt` and instead added to the `done.txt` text file. This file has a different format:
+3.  When a todo item is completed, it should be removed from `todo.txt` and instead added to the `done.txt` text file. This file has a different format:
 
-```txt
-x 2020-06-12 the text contents of the todo item
-```
+    ```txt
+    x 2020-06-12 the text contents of the todo item
+    ```
 
-1. the letter x
-2. the current date in `yyyy-mm-dd` format
-3. the original text
+    1. the letter x
+    2. the current date in `yyyy-mm-dd` format
+    3. the original text
 
-The date when the todo is marked as completed is recorded in the `yyyy-mm-dd` format (ISO 8601). For example, a date like `15th August, 2020` is represented as `2020-08-15`.
+    The date when the todo is marked as completed is recorded in the `yyyy-mm-dd` format (ISO 8601). For example, a date like `15th August, 2020` is represented as `2020-08-15`.
 
-4. The application must open the files `todo.txt` and `done.txt` from where the app is run, and not where the app is located. For example, if we invoke the app like this:
+4.  The application must open the files `todo.txt` and `done.txt` from where the app is run, and not where the app is located. For example, if we invoke the app like this:
 
-		$ cd ~/plans
-		$ node ~/apps/todo.js ls
+    ```
+    $ cd ~/plans
+    $ node ~/apps/todo.js ls
+    ```
 
 The application should look for the text files in ~/plans, since that is the user’s current directory.
 
