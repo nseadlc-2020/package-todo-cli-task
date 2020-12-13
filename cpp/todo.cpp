@@ -1,12 +1,12 @@
 #include <iostream>
 
 auto usage = R"(Usage :-
-$ node todo.js add "todo item"  # Add a new todo
-$ node todo.js ls               # Show remaining todos
-$ node todo.js del NUMBER       # Delete a todo
-$ node todo.js done NUMBER      # Complete a todo
-$ node todo.js help             # Show usage
-$ node todo.js report           # Statistics
+$ ./todo add "todo item"  # Add a new todo
+$ ./todo ls               # Show remaining todos
+$ ./todo del NUMBER       # Delete a todo
+$ ./todo done NUMBER      # Complete a todo
+$ ./todo help             # Show usage
+$ ./todo report           # Statistics
 )";
 
 int main(int argc, char *argv[]) {
