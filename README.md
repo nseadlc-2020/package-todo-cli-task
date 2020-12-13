@@ -8,9 +8,9 @@ See `Makefile` comments to see how language specific zip archives are created.
 
 - [x] C++
 - [x] JavaScript
-- [ ] Java
-- [ ] Python
-- [ ] Ruby
+- [x] Java
+- [x] Python
+- [x] Ruby
 
 ### Run
 
