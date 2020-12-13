@@ -16,7 +16,6 @@ TARGETS = cpp javascript ruby java python
 
 all: clean $(TARGETS)
 	echo "Packaging completed."
-	open _build/
 
 cpp: _build
 	cp -rf cpp _build
