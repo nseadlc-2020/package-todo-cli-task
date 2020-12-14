@@ -22,8 +22,8 @@ cpp: _build
 	cp -arf shared/. _build/cpp
 	# Append C++ compiled binary to `todo.sh`
 	# The $@ will pass through CLI args to the binary
-	echo \\n./todo \"$$\@\" >> _build/cpp/todo.sh
-	echo \\n./todo %1 %2 >> _build/cpp/todo.bat
+	echo \\n./todo.out \"$$\@\" >> _build/cpp/todo.sh
+	echo \\n./todo.out %1 %2 >> _build/cpp/todo.bat
 	cat _build/cpp/Intro.md _build/cpp/getting_started.md _build/cpp/Test.md > _build/cpp/README.md
 	rm _build/cpp/Intro.md _build/cpp/getting_started.md _build/cpp/Test.md
 	cd _build && zip -r --quiet fellowship-cpp.zip cpp -x "node_modules" -x "package-lock.json"
