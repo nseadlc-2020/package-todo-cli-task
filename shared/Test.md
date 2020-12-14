@@ -121,7 +121,7 @@ $ ./todo done 5
 Error: todo #5 does not exist.
 ```
 
-### Generate a report
+### 6. Generate a report
 
 Use the `report` command to see the latest tally of pending and completed todos.
 
