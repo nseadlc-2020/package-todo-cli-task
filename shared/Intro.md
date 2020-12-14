@@ -8,4 +8,4 @@ The specification for this problem is written down as tests. Since we haven’t 
 
 Here's how it should work when you're done:
 
-[![Todo-CLI](https://res.cloudinary.com/sv-co/image/upload/v1607929404/fullstack-CEF/Todo-CLI/IMG_20201214_123104_159_rtxpcq.jpg)](https://vimeo.com/490621534)
+[![Todo-CLI](https://res.cloudinary.com/sv-co/image/upload/v1607935139/fullstack-CEF/Todo-CLI/play-video-demo_fp50wp.png)](https://vimeo.com/490621534)
