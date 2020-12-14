@@ -1,4 +1,3 @@
-
 ## Getting started
 
 1. Install Node.js: You need to have npm installed in your computer for this problem. It comes with Node.js and you can get it by installing Node from https://nodejs.org/en/
@@ -7,11 +6,14 @@
 
 3. Once you are done with the changes you should be able to execute the todo app by running the following commandfrom the terminal.
 
-	Unix/Linux
-	```
-	./todo.sh
-	```
-	Windows
-	```
-	./todo.bat
-	```
+   **On Windows:**
+
+   ```
+   ./todo.bat
+   ```
+
+   **On \*nix:**
+
+   ```
+   ./todo.sh
+   ```

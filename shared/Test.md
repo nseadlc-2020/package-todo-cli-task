@@ -1,5 +1,5 @@
 
-## Instructions to run automated tests
+## Run Automated Tests
 
 1. Install Node.js: You need to have npm installed in your computer for this problem. It comes with Node.js and you can get it by installing Node from https://nodejs.org/en/
 

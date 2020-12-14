@@ -1,4 +1,3 @@
-
 ## Getting started
 
 1. Install Java: You should setup java environment with build utils to complete this task.
@@ -9,11 +8,14 @@
 
 4. Once you are done with the changes you should be able to execute the todo app by running the following commandfrom the terminal.
 
-	Unix/Linux
-	```
-	./todo.sh
-	```
-	Windows
-	```
-	./todo.bat
-	```
+   **On Windows:**
+
+   ```
+   ./todo.bat
+   ```
+
+   **On \*nix:**
+
+   ```
+   ./todo.sh
+   ```
