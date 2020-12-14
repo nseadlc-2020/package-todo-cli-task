@@ -3,7 +3,7 @@
 1. Install Python: Python is usually installed by default on most modern systems. To check what your currently have, open a terminal and run the following command
 
 	```
-	  python --version
+	  python3 --version
 
 	```
   This should output some information on the installed Python version.
