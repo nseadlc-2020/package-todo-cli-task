@@ -11,11 +11,24 @@
 # - [ ] Append language specific executable command to `todo.sh`
 #
 
-TARGETS = cpp javascript ruby java python
+TARGETS = c cpp javascript ruby java python
 
 
 all: clean $(TARGETS)
 	echo "Packaging completed."
+
+c: _build
+	cp -rf c _build
+	cp -arf shared/. _build/c
+	# Append C compiled binary to `todo.sh`
+	# The $@ will pass through CLI args to the binary
+	echo \\n./todo.out \"$$\@\" >> _build/c/todo.sh
+	echo \\n./todo.out %1 %2 >> _build/c/todo.bat
+	cat _build/c/Intro.md _build/c/getting_started.md _build/c/Test.md > _build/c/README.md
+	rm _build/c/Intro.md _build/c/getting_started.md _build/c/Test.md
+	cd _build && zip -r --quiet fellowship-c.zip c -x "node_modules" -x "package-lock.json"
+	rm -rf _build/c
+	echo "Created C package: fellowship-c.zip"
 
 cpp: _build
 	cp -rf cpp _build
