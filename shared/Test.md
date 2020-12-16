@@ -3,9 +3,11 @@
 
 1. Install Node.js: You need to have npm installed in your computer for this problem. It comes with Node.js and you can get it by installing Node from https://nodejs.org/en/
 
-2. Run `npm install` to install all dependencies
+2. Open command prompt and run it as administrator in the folder where all files are present.(To open command prompt as administrator, press `Alt F S A` in the folder where all files are present)
 
-3. Create symbolic link to the executable file
+3. Run `npm install` to install all dependencies
+
+4. Create symbolic link to the executable file
 
    **On Windows:**
 
