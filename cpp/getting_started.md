@@ -4,14 +4,14 @@
 
 2. You are expected to write the code in `todo.cpp` file.
 
-3. You should be able to build the app by running `make app`
+3. You should be able to build the app by running `make app`.
 
-4. Once you are done with the changes you should be able to execute the todo app by running the following commandfrom the terminal.
+4. Once you are done with the changes you should be able to execute the todo app by running the following command from the terminal.
 
    **On Windows:**
 
    ```
-   ./todo.bat
+   .\todo.bat
    ```
 
    **On \*nix:**

@@ -4,12 +4,12 @@
 
 2. You are expected to write the code in `todo.js` file.
 
-3. Once you are done with the changes you should be able to execute the todo app by running the following commandfrom the terminal.
+3. Once you are done with the changes you should be able to execute the todo app by running the following command from the terminal.
 
    **On Windows:**
 
    ```
-   ./todo.bat
+   .\todo.bat
    ```
 
    **On \*nix:**
