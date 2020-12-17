@@ -1,25 +1,50 @@
-
 ## Run Automated Tests
 
-1. Install Node.js: You need to have npm installed in your computer for this problem. It comes with Node.js and you can get it by installing Node from https://nodejs.org/en/
+### 1. Install Node.js
 
-2. Run `npm install` to install all dependencies
+You need to have npm installed in your computer for this problem. It comes with Node.js and you can get it by installing Node from https://nodejs.org/en/
 
-3. Create symbolic link to the executable file
+### 2. Install dependencies
 
-   **On Windows:**
+Run `npm install` to install all dependencies.
 
-   ```
-   > mklink todo todo.bat
-   ```
+### 3. Create Create symbolic link to the executable file
 
-   **On \*nix:**
+#### On Windows
 
-   ```
-   $ ln -s todo.sh todo
-   ```
+To create a symbolic link on Windows, you'll need to run either the Windows Command Prompt, or Windows Powershell **with administrator privileges**. To do so, right-click on the icon for Command Prompt, or Powershell, and choose the _"Run as Administrator"_ option.
 
-4. Now run `npm test` and you will see all the tests failing. As you fill in each functionality, you can re-run the tests to see them passing one by one.
+**Command Prompt:**
+
+```
+> mklink todo todo.bat
+```
+
+**Powershell:**
+
+```
+> cmd /c mklink todo todo.bat
+```
+
+#### On \*nix:
+
+Run the following command in your shell:
+
+```
+$ ln -s todo.sh todo
+```
+
+### 4. Try running tests.
+
+Now run `npm test` and you will see all the tests failing. As you fill in each functionality, you can re-run the tests to see them passing one by one.
+
+## A Note about `/` for Windows Users
+
+In the following sections, you'll see many commands prefixed with `./`, or paths containing the `/` (forward-slash) character.
+
+If you're using the Windows _Command Prompt_, then you'll need to replace `/` with `\` (back-slash) for these commands and paths to work as expected.
+
+On Windows _Powershell_, these substitutions are not required.
 
 ## Specification
 
@@ -47,11 +72,11 @@ change light bulb
 4.  The application must open the files `todo.txt` and `done.txt` from where the app is run, and not where the app is located. For example, if we invoke the app like this:
 
     ```
-    $ cd ~/plans
-    $ ~/apps/todo ls
+    $ cd /path/to/plans
+    $ /path/to/apps/todo ls
     ```
 
-    The application should look for the text files in `~/plans`, since that is the user’s current directory.
+    The application should look for the text files in `/path/to/plans`, since that is the user’s current directory.
 
 ## Usage
 
@@ -130,6 +155,6 @@ $ ./todo report
 dd/mm/yyyy Pending : 1 Completed : 4
 ```
 
-
 ## Improving README.md
+
 If you feel like we are missing out steps, feel free to make a pull request. [Github Repo](https://github.com/nseadlc-2020/package-todo-cli-task)
