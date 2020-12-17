@@ -152,7 +152,7 @@ Use the `report` command to see the latest tally of pending and completed todos.
 
 ```
 $ ./todo report
-dd/mm/yyyy Pending : 1 Completed : 4
+yyyy-mm-dd Pending : 1 Completed : 4
 ```
 
 ## Improving README.md
