@@ -7,7 +7,7 @@
    ```
 
    This should output some information on the installed Python version.
-   You can also install ruby by following these instructions: https://installpython3.com/
+   You can also install python by following these instructions: https://installpython3.com/
 
 2. You are expected to write the code in `todo.py` file.
 
