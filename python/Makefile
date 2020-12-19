@@ -2,7 +2,7 @@ test:
 	npm run test
 
 clean:
-	rm -f node_modules
+	rm -rf node_modules
 
 install:
 	npm install
