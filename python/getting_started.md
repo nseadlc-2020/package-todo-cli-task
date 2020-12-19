@@ -22,5 +22,6 @@
    **On \*nix:**
 
    ```
+   chmod +x todo.sh
    ./todo.sh
    ```
