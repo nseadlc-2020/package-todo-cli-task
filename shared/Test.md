@@ -46,6 +46,16 @@ If you're using the Windows _Command Prompt_, then you'll need to replace `/` wi
 
 On Windows _Powershell_, these substitutions are not required.
 
+## Known Issues
+
+A few notes to help you avoid any hiccups while implementing the programming challenge:
+
+1. If you are on Windows, you might have difficulty getting the tests to pass because of UTF encoding issues. If you get stuck, please [refer to the thread here](https://github.com/nseadlc-2020/package-todo-cli-task/issues/12).
+
+2. The tests can fail between 12am and 5.30am (early morning IST). This is because the test parses the date from your system time in UTC format, while in certain programming languages the date and time functions use the local timezone (IST). Accounting for this in the tests will make it more complex and need extra dependencies, so we have kept it intentionally simple. So if you run into this specific problem, you can submit your code as is with the transient date mismatch, or you can change your code to use UTC. Either options are fine.
+
+3. In Windows machines, the `make` command might not exist and can prevent you from running the tests. This can be fixed [by using WSL, or installing MinGW, among other options](https://stackoverflow.com/questions/32127524/how-to-install-and-use-make-in-windows).
+
 ## Specification
 
 1. The app can be run in the console with `./todo`.
