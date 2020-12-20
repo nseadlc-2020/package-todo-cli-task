@@ -12,7 +12,7 @@ beforeEach(() => {
   deleteFile(`${__dirname}/done.txt`);
 });
 
-let todoTxtCli = (...args) => [`${__dirname}/todo`, ...args].join(" ");
+let todoTxtCli = (...args) => [`${__dirname.replace(/ /g,"^ ")}/todo`, ...args].join(" ");
 
 let usage = `Usage :-
 $ ./todo add "todo item"  # Add a new todo
