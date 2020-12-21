@@ -74,7 +74,7 @@ change light bulb
     ```
 
     1. the letter x
-    2. the current date in `yyyy-mm-dd` format
+    2. the current date (UTC/GMT) in `yyyy-mm-dd` format
     3. the original text
 
     The date when the todo is marked as completed is recorded in the `yyyy-mm-dd` format (ISO 8601). For example, a date like `15th August, 2020` is represented as `2020-08-15`.
