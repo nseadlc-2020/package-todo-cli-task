@@ -24,3 +24,4 @@
    ```
    ./todo.sh
    ```
+ also add a task to delete all the files that are genrataed when program is running so that if we want to add freshly new tasks so we don't need to delete them manually.
