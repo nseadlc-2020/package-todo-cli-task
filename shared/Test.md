@@ -115,6 +115,14 @@ $ ./todo ls
 [1] water the plants
 ```
 
+list when there are no remaining todos
+
+```
+$ ./todo ls 
+There are no pending todos!
+```
+
+
 ### 3. Add a new todo
 
 Use the `add` command. The text of the todo item should be enclosed within double quotes (otherwise only the first word is considered as the todo text, and the remaining words are treated as different arguments).
@@ -122,6 +130,13 @@ Use the `add` command. The text of the todo item should be enclosed within doubl
 ```
 $ ./todo add "the thing i need to do"
 Added todo: "the thing i need to do"
+```
+
+showing error message when add is not followed by a todo
+
+```
+$ ./todo add 
+Error: Missing todo string. Nothing added!
 ```
 
 ### 4. Delete a todo item
@@ -140,6 +155,13 @@ $ ./todo del 5
 Error: todo #5 does not exist. Nothing deleted.
 ```
 
+showing error message when del is not followed by any todo number
+
+```
+$ ./todo del 
+delete does not have enough arguments
+```
+
 ### 5. Mark a todo item as completed
 
 Use the `done` command to mark a todo item as completed by its number.
@@ -155,6 +177,14 @@ Attempting to mark a non-existed todo item as completed will display an error me
 $ ./todo done 5
 Error: todo #5 does not exist.
 ```
+
+Attempting to mark mark as done without providing a todo number.
+
+```
+$ ./todo done 
+Error: Missing NUMBER for marking todo as done.
+```
+
 
 ### 6. Generate a report
 
