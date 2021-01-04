@@ -73,9 +73,9 @@ test("list todos in reverse order (added latest first)", () => {
   ];
   todos.forEach((todo) => execSync(todoTxtCli("add", `"${todo}"`)));
 
-  let expected = `[3] find needle in the haystack
-[2] water the plants
-[1] the thing i need to do
+  let expected = `[3] find needle in the haystack\n
+[2] water the plants\n
+[1] the thing i need to do\n
 `;
   let received = execSync(todoTxtCli("ls")).toString("utf8");
 
